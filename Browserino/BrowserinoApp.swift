@@ -163,13 +163,13 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
             NSPoint(
                 x: clamp(
                     min: screen.minX + 20,
-                    max: screen.maxX - BrowserinoWindow.selectorWidth - 20,
-                    value: NSEvent.mouseLocation.x - BrowserinoWindow.selectorWidth / 2
+                    max: screen.maxX - selectorWindow!.frame.width - 20,
+                    value: NSEvent.mouseLocation.x - selectorWindow!.frame.width / 2
                 ),
                 y: clamp(
                     min: screen.minY + 20,
-                    max: screen.maxY - BrowserinoWindow.selectorHeight - 20,
-                    value: NSEvent.mouseLocation.y - (BrowserinoWindow.selectorHeight - 30)
+                    max: screen.maxY - selectorWindow!.frame.height - 20,
+                    value: NSEvent.mouseLocation.y - (selectorWindow!.frame.height - 30)
                 )
             )
         )

@@ -28,6 +28,8 @@ class BrowserinoWindow: NSPanel {
         self.standardWindowButton(.closeButton)?.isHidden = true
         self.standardWindowButton(.zoomButton)?.isHidden = true
         
+        self.setFrameAutosaveName("prompt_Size")
+        
         self.collectionBehavior = [.stationary, .ignoresCycle, .fullScreenAuxiliary, .canJoinAllSpaces]
         self.isOpaque = false
         self.level = NSWindow.Level(Int(CGShieldingWindowLevel()))
